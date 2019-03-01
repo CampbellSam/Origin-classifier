@@ -1,0 +1,9 @@
+#PBS -l nodes=1:ppn=1:dickenslinux
+#PBS -l walltime=4:00:00
+#PBS -M nick.dickens@glasgow.ac.uk
+#PBS -m ae
+#PBS -o /wtcmpbix/nd48m/logs/
+#PBS -e /wtcmpbix/nd48m/logs/
+#PBS -d /home/nd48m/git/originclassifier
+
+python bam2predictScore.py > scores.wig
